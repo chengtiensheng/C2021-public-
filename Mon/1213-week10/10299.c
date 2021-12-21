@@ -11,7 +11,7 @@ int main()
         int now=0;
         for(int i=0;i<=sz;i++)
         {
-            if(('a'<=s[i]&&s[i]<='z')||('A'<=s[i]&&s[i]<='Z')||('0'<=s[i]&&s[i]<='9'))
+            if(('a'<=s[i]&&s[i]<='z')||('A'<=s[i]&&s[i]<='Z')||('0'<=s[i]&&s[i]<='9')||s[i]=='_')
             {
                 tmp[i-now]=s[i];
                 //printf("%c",s[i]);
@@ -29,10 +29,11 @@ int main()
                 if(strcmp(tmp,"while")==0||strcmp(tmp,"for")==0||strcmp(tmp,"if")==0||strcmp(tmp,"case")==0)
                 {
                     ans++;
-
+ 
                 }
                 now=i+1;
                 continue;
+ 
             }
         }
     }
